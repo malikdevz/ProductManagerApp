@@ -42,8 +42,8 @@ Due to the nature of the mock API, this project uses **Optimistic UI updates**:
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/your-username/product-manager-app.git
-   cd product-manager-app
+   git clone https://github.com/malikdevz/ProductManagerApp.git
+   cd ProductManagerApp
    ```
 
 2. **Install dependencies**
