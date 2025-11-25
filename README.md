@@ -22,6 +22,7 @@ A modern, responsive Product Management Dashboard built with **Vue 3**, **Vite**
 - **Advanced Filtering:**
   - Real-time search by name.
   - Filter by Category.
+  - Filter by Stock size.
   - Visual Stock Status indicators (In Stock, Low Stock, Out of Stock).
 - **Responsive Table:** Custom-styled table with scroll management (`hide-scrollbar`).
 
