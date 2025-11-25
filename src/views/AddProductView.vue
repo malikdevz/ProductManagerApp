@@ -23,7 +23,7 @@ const form = ref({
 const successMessage = ref('')
 
 const categories = [
-  'smartphones', 'laptops', 'fragrances', 'skincare', 'groceries', 'home-decoration', 'apparel', 'books'
+  'smartphones', 'laptops', 'fragrances', 'skincare', 'groceries', 'home decoration','beauty','Apparel','Furniture'
 ]
 
 

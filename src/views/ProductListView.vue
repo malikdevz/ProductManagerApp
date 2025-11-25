@@ -20,7 +20,7 @@ const currentPage = ref(1)
 const itemsPerPage = 4
 
 const categories = [
-  'smartphones', 'laptops', 'fragrances', 'skincare', 'groceries', 'home-decoration'
+  'smartphones', 'laptops', 'fragrances', 'skincare', 'groceries', 'home decoration','beauty','Apparel','Furniture'
 ]
 
 const applySearch = () => {
