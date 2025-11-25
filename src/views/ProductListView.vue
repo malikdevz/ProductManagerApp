@@ -10,6 +10,7 @@ const productStore = useProductStore()
 
 const localSearchQuery = ref(productStore.searchQuery)
 const localCategoryFilter = ref(productStore.categoryFilter)
+const localStockFilter = ref(productStore.stockFilter)
 const activeMenuId = ref(null)
 const showDeleteModal = ref(false)
 const productToDelete = ref(null)
@@ -66,6 +67,11 @@ const getStockColorClass = (stock) => {
   if (stock > 50) return 'text-green-600';
   if (stock > 0) return 'text-orange-500';
   return 'text-red-600';
+}
+
+const applyStockFilter = () => {
+  productStore.setStockFilter(localStockFilter.value)
+  currentPage.value = 1 
 }
 
 // on click on item
@@ -157,11 +163,15 @@ onMounted(() => {
           </option>
         </select>
         
-        <select class="p-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 md:w-48">
-          <option value="">Stock Status</option>
-          <option value="in_stock">In Stock</option>
-          <option value="low_stock">Low Stock</option>
-          <option value="out_of_stock">Out of Stock</option>
+        <select
+          v-model="localStockFilter"
+          @change="applyStockFilter"
+          class="p-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 md:w-48"
+        >
+          <option value="">All Stock Status</option>
+          <option value="in_stock">In Stock (> 50)</option>
+          <option value="low_stock">Low Stock (1-50)</option>
+          <option value="out_of_stock">Out of Stock (0)</option>
         </select>
       </div>
     </div>

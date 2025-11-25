@@ -10,7 +10,8 @@ export const useProductStore = defineStore('product', {
     loading: false,
     error: null,
     searchQuery: '',
-    categoryFilter: ''
+    categoryFilter: '',
+    stockFilter: ''
   }),
   getters: {
     filteredProducts: (state) => {
@@ -29,6 +30,16 @@ export const useProductStore = defineStore('product', {
         filtered = filtered.filter(
           (product) => product.category.toLowerCase() === state.categoryFilter.toLowerCase()
         )
+      }
+
+      if (state.stockFilter) {
+        if (state.stockFilter === 'in_stock') {
+            filtered = filtered.filter(p => p.stock > 50)
+        } else if (state.stockFilter === 'low_stock') {
+            filtered = filtered.filter(p => p.stock > 0 && p.stock <= 50)
+        } else if (state.stockFilter === 'out_of_stock') {
+            filtered = filtered.filter(p => p.stock <= 0)
+        }
       }
       return filtered
     }
@@ -111,6 +122,9 @@ export const useProductStore = defineStore('product', {
         }
     },
     setSearchQuery(query) { this.searchQuery = query },
-    setCategoryFilter(category) { this.categoryFilter = category }
+    setCategoryFilter(category) { this.categoryFilter = category },
+    setStockFilter(status) {
+        this.stockFilter = status
+    }
   }
 })
