@@ -6,7 +6,7 @@ A modern, responsive Product Management Dashboard built with **Vue 3**, **Vite**
 ![Vue Version](https://img.shields.io/badge/Vue.js-3.x-4FC08D)
 ![Tailwind](https://img.shields.io/badge/Tailwind_CSS-3.x-38B2AC)
 
-![](./Capture d’écran du 2025-11-25 12-54-11.png)
+![Gui](./Capture d’écran du 2025-11-25 12-54-11.png)
 
 ## ✨ Features
 
