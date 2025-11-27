@@ -1,4 +1,4 @@
-# 📦 Vue 3 Product Manager Dashboard
+# 📦 Product Manager App 
 
 A modern, responsive Product Management Dashboard built with **Vue 3**, **Vite**, **Tailwind CSS**, and **Pinia**. This application interacts with the [DummyJSON API](https://dummyjson.com/) to simulate a real-world inventory management system.
 
